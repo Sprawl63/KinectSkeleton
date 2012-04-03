@@ -1,0 +1,9 @@
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\MainWindow.baml
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\App.g.cs
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton_MarkupCompile.cache
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton.g.resources
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Brenton\Desktop\KinectSkeleton\KinectSkeleton\KinectSkeleton\obj\x86\Debug\GenerateResource.write.1.tlog
