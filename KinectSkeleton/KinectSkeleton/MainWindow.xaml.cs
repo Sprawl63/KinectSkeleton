@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Kinect;
+using System.Timers;
 
 namespace WpfApplication1
 {
@@ -27,9 +28,21 @@ namespace WpfApplication1
 
         KinectSensor _sensor;
         int playerDepth;
+        int lastnum = 10;
+        int num = 1;
+        Boolean timetoflip = true;
+        static Random rdm = new Random(3);
+        BitmapImage image = new BitmapImage(new Uri("/Images/S1.png", UriKind.Relative));
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+             //initialize and start my timer with a tick time of 15sec
+              Timer myTimer = new Timer();
+              myTimer.Elapsed += new ElapsedEventHandler( DisplayTimeEvent );
+              myTimer.Interval = 2000;
+              myTimer.Start();
+           
+            
             if (KinectSensor.KinectSensors.Count > 0)
             {
                 _sensor = KinectSensor.KinectSensors[0];
@@ -45,9 +58,22 @@ namespace WpfApplication1
             }
 
         }
-
+        public void DisplayTimeEvent( object source, ElapsedEventArgs e )
+         {
+             if (timetoflip==true)
+             {
+                 num = rdm.Next(3);
+                 while (lastnum == num)
+                 {
+                     num = rdm.Next(3);
+                 }
+             }
+             
+             
+         }
         void _sensor_AllFramesReady(object sender, AllFramesReadyEventArgs e)
         {
+            
             //throw new NotImplementedException();
             using (ColorImageFrame colorFrame = e.OpenColorImageFrame())
             {
@@ -64,24 +90,23 @@ namespace WpfApplication1
                 int stride = colorFrame.Width * 4;
 
                 image1.Source = BitmapSource.Create(colorFrame.Width, colorFrame.Height, 96, 96, PixelFormats.Bgr32, null, pixels, stride);
-
-            }
-            /*
-            using (DepthImageFrame depthFrame = e.OpenDepthImageFrame())
-            {
-                if (depthFrame == null)
+                
+                if (num == 2)
                 {
-                    return;
+                    image2.Source = new BitmapImage(new Uri("/Images/S3.png", UriKind.Relative));
+                    lastnum = 2;
                 }
-
+                else if (num == 1)
+                {
+                    image2.Source = new BitmapImage(new Uri("/Images/S2.png", UriKind.Relative));
+                    lastnum = 1;
+                }
+                else
+                {
+                    image2.Source = new BitmapImage(new Uri("/Images/S1.png", UriKind.Relative));
+                    lastnum = 0;
+                }
             }
-             */
-
-        }
-
-        void sensor_AllFramesReady(object sender, AllFramesReadyEventArgs e)
-        {
-
         }
 
         void GetCameraPoint(Skeleton first, AllFramesReadyEventArgs e)
@@ -162,10 +187,37 @@ namespace WpfApplication1
                 }
             }
         }
+        /**
+        * JOINT XY Coordinates for Image 1-3
+        * 
+        * S3 Points
+        *Head:278,102
+        *LeftHand:85,167
+        *RightHand:468,145
+        *RightFoot:376,385
+        *LeftFoot:105,373
+        *HipCenter:275,239
 
+        *S2 Points
+        *Head:239,76
+        *LeftHand:156,115
+        *RightHand:328,206
+        *RightFoot:305,312
+        *LeftFoot:280,385
+        *HipCenter:259,222
+
+        *S1 Points
+        *Head:242,66
+        *LeftHand:239,0
+        *RightHand:385,31
+        *RightFoot:252,385
+        *LeftFoot:212,385
+        *HipCenter:234,210
+        **/
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }
+
     }
 }
