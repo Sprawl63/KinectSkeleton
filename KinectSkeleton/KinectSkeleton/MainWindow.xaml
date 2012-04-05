@@ -5,5 +5,6 @@
     <Grid>
         <Image Height="441" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="618" UseLayoutRounding="True" />
         <Image Height="455" HorizontalAlignment="Left" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="618" Source="/KinectSkeleton;component/Images/S3.png" Margin="0,-14,0,0" DataContext="{Binding}" />
+        <Label Content="Your Score: 0" Height="28" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" Width="103" FontWeight="Bold" Foreground="Blue" />
     </Grid>
 </Window>

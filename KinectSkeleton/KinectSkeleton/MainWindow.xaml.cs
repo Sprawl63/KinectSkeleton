@@ -27,19 +27,19 @@ namespace WpfApplication1
         }
 
         KinectSensor _sensor;
-        int playerDepth;
-        int lastnum = 10;
-        int num = 1;
-        Boolean timetoflip = true;
-        static Random rdm = new Random(3);
-        BitmapImage image = new BitmapImage(new Uri("/Images/S1.png", UriKind.Relative));
+
+        int score = 0;      //score variable
+        int lastnum = 10;   //last image that was chosen saved here so we don't repeat
+        int num = 1;        //the number that gets flipped randomly to choose image
+
+        static Random rdm = new Random(3);  // our random number generator
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
              //initialize and start my timer with a tick time of 15sec
               Timer myTimer = new Timer();
               myTimer.Elapsed += new ElapsedEventHandler( DisplayTimeEvent );
-              myTimer.Interval = 2000;
+              myTimer.Interval = 15000;
               myTimer.Start();
            
             
@@ -60,14 +60,14 @@ namespace WpfApplication1
         }
         public void DisplayTimeEvent( object source, ElapsedEventArgs e )
          {
-             if (timetoflip==true)
-             {
+             
+             
                  num = rdm.Next(3);
                  while (lastnum == num)
                  {
                      num = rdm.Next(3);
                  }
-             }
+             
              
              
          }
@@ -90,6 +90,11 @@ namespace WpfApplication1
                 int stride = colorFrame.Width * 4;
 
                 image1.Source = BitmapSource.Create(colorFrame.Width, colorFrame.Height, 96, 96, PixelFormats.Bgr32, null, pixels, stride);
+               
+                //TESTING THE SCORE TO SEE IF IT WORKS
+                score = score + 1;
+                //sets the label to display new score
+                label1.Content = "Your Score: " + score;
                 
                 if (num == 2)
                 {

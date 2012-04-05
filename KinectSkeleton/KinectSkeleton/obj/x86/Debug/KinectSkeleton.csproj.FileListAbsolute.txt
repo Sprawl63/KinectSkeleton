@@ -22,3 +22,16 @@ C:\Users\Ryan\Desktop\kinectproject2\KinectSkeleton\KinectSkeleton\obj\x86\Debug
 C:\Users\Ryan\Desktop\kinectproject2\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton.pdb
 C:\Users\Ryan\Desktop\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton.exe
 C:\Users\Ryan\Desktop\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton.pdb
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton.exe
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton.pdb
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\bin\Debug\KinectSkeleton.exe
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\bin\Debug\KinectSkeleton.pdb
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\MainWindow.baml
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\App.g.cs
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton_MarkupCompile.cache
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\KinectSkeleton.g.resources
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Ryan\Desktop\gitbetterfuckingwork\KinectSkeleton\KinectSkeleton\obj\x86\Debug\GenerateResource.write.1.tlog
